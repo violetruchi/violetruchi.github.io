@@ -1,0 +1,344 @@
+:root {
+  /*
+  --accent-color: #e6a756;
+  --accent-dark: #df902a;
+  --navbar-color: rgba(47, 23, 15, 0.9);
+  --navitem-color: rgba(255, 255, 255, 0.7);
+  --navitem-hover: rgba(255, 255, 255, 0.4);
+  */
+  --accent-color: #7b0094dd;
+  --accent-faded09: #01bb01dd;
+  --accent-faded05: #11dd1188;
+  --accent-dark: #7b0094;
+  --navbar-color: #000000dd;
+  --navitem-color: rgba(255, 255, 255, 0.7);
+  --navitem-hover: rgba(255, 255, 255, 0.4);
+  --violet_main: #7b0094;
+  --violet_secondary: #a85cb3;
+  --ruchi_main: #8a0042;
+  --ruchi_secondary: #d80071;
+}
+
+body {
+  font-family: 'Lora';
+  /*background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");*/
+  /*background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65));*/
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: #fffaf1;
+  overflow-x: hidden;
+  margin-top: min(14vh, 10vw);
+}
+
+a, a:hover {
+  color: var(--accent-dark);
+}
+
+.navbar {
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #11dd11;
+}
+
+.site-heading .site-heading-lower {
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--violet_main);
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.section-heading .section-heading-lower ul{
+  font-size: 1.5rem;
+  list-style-position: inside;
+  list-style-type: hyphen;
+  text-align: left;
+  padding-left: 20%;
+}
+.section-heading-lower ul li::marker{
+  content: "-";
+}
+.section-heading-lower ul li{
+  white-space: nowrap;
+}
+
+
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+#mainNav {
+  background-color: var(--navbar-color);
+  font-family: 'Raleway';
+}
+
+#mainNav .navbar-brand {
+  color: var(--accent-color);
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: var(--navitem-color);
+  font-weight: 800;
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link {
+  color: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+  .nav-item {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--navitem-hover);
+  }
+
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: var(--accent-color);
+  }
+}
+
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.intro {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .intro .intro-img {
+    width: 75%;
+    float: right;
+  }
+
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+}
+
+.intro-img{
+  background-image: url(../media/shop_min.png);
+  background-size: cover;
+  background-color: #afb589;
+  background-position: center;
+  background-blend-mode: multiply;
+  min-height: min(45vw, 70vh);
+  display: block;
+}
+
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--accent-faded09);
+}
+
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .about-heading .about-heading-img {
+    position: relative;
+    z-index: 0;
+  }
+
+  .about-heading .about-heading-content {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
+}
+
+.list-hours {
+  font-size: 0.9rem;
+}
+
+.list-hours .list-hours-item {
+  border-bottom: 1px solid var(--accent-faded05);
+  padding-bottom: .25rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.list-hours .list-hours-item.today {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+@media (min-width: 992px) {
+  .list-hours {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+.address strong {
+  font-size: 1.2rem;
+}
+
+.footer {
+  background: #fffaf1;
+  color: var(--violet_secondary);
+}
+
+.footer hr {
+  background-color: white;
+  width: 98%;
+  margin-left: 1%;
+}
+.footer *{
+  color: var(--violet_secondary);
+}
+
+.text-primary {
+  color: var(--accent-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--accent-color) !important;
+}
+
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.font-weight-light {
+  font-weight: 100 !important;
+}
+
+.center{
+  margin-left: 0;
+  margin-right: 0;
+}
